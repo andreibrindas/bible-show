@@ -2,7 +2,6 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
-import icon from '../../assets/icon.svg';
 import './App.css';
 
 function Hello() {
@@ -41,7 +40,6 @@ function Hello() {
             </span>
             Donate
           </button>
-          yuha
         </a>
       </div>
       <ul style={{ overflow: 'scroll', height: '200px' }}>
