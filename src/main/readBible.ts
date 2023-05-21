@@ -1,4 +1,7 @@
-import sqlite3 from 'sqlite3';
+// const sqlite3 = require('sqlite3');
+import sqlite from 'sqlite3';
+
+const sqlite3 = sqlite.verbose();
 
 const db = new sqlite3.Database(`${process.cwd()}/bibles/bible_db.sqlite`);
 
@@ -9,7 +12,7 @@ export default async function readBible(
 ) {
   const sql = `SELECT * FROM biblia WHERE carte = ? AND capitol = ?`;
 
-  db.all(sql, [book, chapter], (err, result: any) => {
+  db.all(sql, [book, chapter], (err: any, result: any) => {
     if (err) {
       throw err;
     }
